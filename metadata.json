@@ -1,0 +1,6 @@
+{
+  "name": "AutoTune Studio Pro",
+  "description": "Professional music recording and live Auto-Tune studio with real-time DSP pitch correction, audio effects, beats, and multi-track export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
