@@ -18,19 +18,14 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@v4
 
       - name: Set up JDK 21
-        uses: actions/setup-java@3a4f6e1af504cf6a31855fa899c6aa5355ba6c12 # v4.7.0
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
           cache: 'gradle'
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@94baf254fe0c577150b7536174496b4663388a16 # v4.3.0
-        with:
-          gradle-version: wrapper
 
       - name: Grant Execute Permission for Gradlew
         run: chmod +x gradlew
@@ -54,7 +49,7 @@ jobs:
           ls -lh app/build/outputs/apk/debug/app-debug.apk
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb99ba8edd # v4.6.1
+        uses: actions/upload-artifact@v4
         with:
           name: AutoTune-Studio-Pro-APK
           path: app/build/outputs/apk/debug/app-debug.apk
